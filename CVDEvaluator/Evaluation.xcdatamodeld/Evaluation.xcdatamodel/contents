@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Doctor" representedClassName="Doctor" syncable="YES" codeGenerationType="class">
+        <attribute name="doctorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iconUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loginName" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Patient" inverseName="relationship" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName="Patient" syncable="YES" codeGenerationType="class">
+        <attribute name="computeEvaluationRequestDBP" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="computeEvaluationRequestGender" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="computeEvaluationRequestInputs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="computeEvaluationRequestPAH" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="computeEvaluationRequestSBP" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="computeEvaluationResultDiagnostics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="computeEvaluationResultICD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="computeEvaluationResultReferences" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="computeEvaluationResultTherapeutics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateModified" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="doctorLoginName" optional="YES" attributeType="String" customClassName="Doctor" syncable="YES"/>
+        <attribute name="evaluationData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="evaluationUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patientAge" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patientName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Doctor" inverseName="relationship" inverseEntity="Doctor" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Doctor" positionX="-54" positionY="0" width="128" height="135"/>
+        <element name="Patient" positionX="-63" positionY="-18" width="128" height="300"/>
+    </elements>
+</model>
